@@ -246,13 +246,13 @@ const reply = (teks) => {
         if (db.data.chats[m.chat].antilink) {
         if (budy.match(`chat.whatsapp.com`)) {
         reply(`「 ANTI LINK 」\n\nYou have been detected sending a group link, sorry you will be kicked !`)
-        if (!isBotAdmins) return reply(`I Am Not An Admin, How Could I Kick Somebody Who Send Link 😒`)
+        if (!isBotAdmins) return reply(`أنا لست مشرف 😒`)
         let gclink = (`https://chat.whatsapp.com/`+await GojoMdNx.groupInviteCode(m.chat))
         let isLinkThisGc = new RegExp(gclink, 'i')
         let isgclink = isLinkThisGc.test(m.text)
-        if (isgclink) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 😉, Because You Sent This Group Link❤️`)
-        if (isAdmins) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 😉, Because You Are An Admin Of The Group❤️`)
-        if (isCreator) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 😉, Because You Are My Owner Hahahahah🤣😘, You Think I Will Betray You Huh🐦`)
+        if (isgclink) return reply(`لن أطردك 😉, لأنك ارسلت لينك جروبنا❤️`)
+        if (isAdmins) return reply(`لن أطردك  😉, لأنك مشرف❤️`)
+        if (isCreator) return reply(`لن أطردك 😉, لأنك صانعي هههههههه🤣😘, هل ظننت أني سوف أقوم بذلك🐦`)
         GojoMdNx.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
         }
@@ -1255,36 +1255,20 @@ GojoMdNx.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${san
       case 'محبوب':
       case 'كلب':
       case 'احمق':
-      case 'قرد':
-      case 'كريه':
-      case 'مكروه':
-      case 'خروف':
-      case 'سافل':
       case 'ورع':
-      case 'مخادع':
-      case 'مظلوم':
       case 'مسكين':
-      case 'مخدوع':
       case 'جميل':
       case 'طيب':
       case 'محترم':
-      case 'زفت':
-      case 'وصخ':
       case 'حزين':
       case 'مجنون':
-      case 'بشع':
       case 'صنم':
       case 'شجاع':
-      case 'رقاص':
       case 'مضحك':
       case 'مستفز':
       case 'عاقل':
-      case 'محتال':
-      case 'نجس':
       case 'مؤدب':
-      case 'غامض':
-      case 'ظالم':	
-      case 'مبااع':
+      case 'غامض':	
       case 'صادق':
       case 'كذاب': {
             if (!m.isGroup) return replay(`${mess.group}`)
@@ -1765,7 +1749,7 @@ break
                                     id: 'owner'
                                 }
                             }]
-                      let txt = `「 غوجو ساتورو موجود 🎉 」\n\n${text}`
+                      let txt = `「 أرثر هنا 🎉 」\n\n${text}`
                       GojoMdNx.send5ButImg(i, txt, GojoMdNx.user.name, global.thumb, btn)
                     }
                 reply(`「 تم  ✌ 」◣`)
@@ -1799,7 +1783,7 @@ break
                                     id: 'owner'
                                 }
                             }]
-                      let txt = `「 غوجو ساتورو موجود 🎉」\n\n${text}`
+                      let txt = `「 أرثر هنا 🎉」\n\n${text}`
                       GojoMdNx.send5ButImg(yoi, txt, GojoMdNx.user.name, global.thumb, btn)
 		}
 		reply('「 تم 🤗 」◣')
@@ -3360,11 +3344,11 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             hydratedFooterText: `┌─❖
 ┌─❖ مـرحبـاً 🤗 」
 └┬❖ 「 ${pushname} 」
-││✑「مـعـك بـوت غـوجـو 👋🏻」◣
-││✑「مـن مـمـلـكـة غولد 🤗」◣
+││✑「أنا أرثر بوت 👋🏻」◣
+││✑「مـن مـمـلـكـة أنمي فور أول 🤗」◣
 │└───────────────┈ ⳹
  「 مـعـلـومـات عـن الـبـوت 」
-│✙「 اسـم الـبـوت 」◣ : 「 غوجو ✨🤞🏻 」◣
+│✙「 اسـم الـبـوت 」◣ : 「 أرثر ✨🤞🏻 」◣
 │✙「 رقـم الـمـالـك 」◣ : ${global.owner}
 │✙「عـدد الـمـسـتـخـدمـيـن」◣ : ${Object.keys(global.db.data.users).length}
 └┬──────────────┈ ⳹
@@ -3415,11 +3399,11 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             hydratedFooterText: `
 ┌─❖ مـرحبـاً 🤗 」
 └┬❖ 「 ${pushname} 」
-││✑「مـعـك بـوت غـوجـو 👋🏻」◣
-││✑「مـن مـمـلـكـة غولد 🤗」◣
+││✑「أنا أرثر بوت 👋🏻」◣
+││✑「مـن مـمـلـكـة أنمي فور اول 🤗」◣
 │└───────────────┈ ⳹
  「 مـعـلـومـات عـن الـبـوت 」
-│✙「 اسـم الـبـوت 」◣ : 「 غوجو ✨🤞🏻 」◣
+│✙「 اسـم الـبـوت 」◣ : 「 أرثر ✨🤞🏻 」◣
 │✙「 رقـم الـمـالـك 」◣ : ${global.owner}
 │✙「عـدد الـمـسـتـخـدمـيـن」◣ : ${Object.keys(global.db.data.users).length}
 └┬──────────────┈ ⳹
@@ -3461,11 +3445,8 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `「 مرحبا 👋🏻  」◣
-		    「 معك بوت غوجو 🤗 」◣
-		    「 افضل بوت عربي 」◣
- 「 رابط فرع التعليم على البوت」◣
-		    「https://chat.whatsapp.com/CKLmAGJo3iw5AvNM1KZee3」◣
-		    「 الي محتاج شروحات ينضم 」◣`,
+		    「 أنا أرثر بوت 🤗 」◣
+		    「 تابع لممكلة أنمي فور أول 」◣
                     description: `「 اختر قائمة من فضلك 」◣`,
                     buttonText: "「 القائمة 」◣",
                     footerText: `「 تحت الصيانة ⚙️」◣`,
@@ -3564,7 +3545,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "المملكة",
 								"rows": [
 									{
-										"title": "قائمة استمارات مملكة غولد",
+										"title": "قائمة استمارات مملكة أنمي فور أول",
 										"description": ".17.",
 										"rowId": `${prefix}anon`
 									}
@@ -3574,7 +3555,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "نبذة",
 								"rows": [
 									{
-										"title": "تاريخ مملكة غولد",
+										"title": "تاريخ مملكة أنمي فور أول",
 										"description": ".18.",
 										"rowId": `${prefix}tqtt`
 									}
@@ -3592,9 +3573,9 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             }
             break
             case 'التسجhgjيل': case 'التسجيل': {
-                reply(`「 الفرع الخاص ل التعليم على البوت 」◣
+                reply(`「 رابط الإستقبال 」◣
 
-「 _https://chat.whatsapp.com/CKLmAGJo3iw5AvNM1KZee3_ 」◣
+「 _https://chat.whatsapp.com/KcwvfLDeLSt2htF8zJ2FUI_ 」◣
 
 「 نرحب بالجميع. 」◣`)
             }
@@ -3906,43 +3887,27 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 ┏━「 ${botname} 」━━⭓ 
 ┃╔═✪「 السخرية 」	        
 ┃╠احمق 
-┃╠بشع
 ┃╠جبان
 ┃╠جميل
 ┃╠حزين
 ┃╠حمار
-┃╠خروف
 ┃╠ذكي
-┃╠رقاص
-┃╠زفت
-┃╠سافل
 ┃╠شجاع
 ┃╠صادق
 ┃╠صنم
 ┃╠طيب
-┃╠ظالم
 ┃╠عاقل
 ┃╠غامض
 ┃╠غبي
-┃╠قرد
 ┃╠كاذب
-┃╠كريه
 ┃╠كلب
-┃╠مبااع
 ┃╠مجنون
 ┃╠محبوب
 ┃╠محترم
-┃╠محتال
-┃╠مخادع
-┃╠مخدوع
 ┃╠مسكين
 ┃╠مستفز
 ┃╠مضحك
-┃╠مظلوم
-┃╠مكروه
 ┃╠مؤدب
-┃╠نجس
-┃╠وصخ
 ┃╠ورع
 ┃╚═════════════✪
 ┗━━「 ${pushname} 」━⭓`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
@@ -4121,7 +4086,7 @@ await GojoMdNx.send5ButImg(from, `` + '' + ' ', `
 break
 case 'thanksto': case 'tqto': case 'tqtt':
 var unicorn = await getBuffer(picak+'.18.')
-await GojoMdNx.send5ButImg(from, `` + '' + ' ', `مملكة غولد كانت تضم حوالي 50 نقابة كانت من افضل الممالك قديما بقيادة الامبراطور توشيرو والنائب ساتومي من نأحية التحديات والمسابقات كانت المملكة من الاوائل وقتها لكن في مرة من الايام تعطل هاتف الامبراطور توشيرو واختفى حوالي سنتين وعندما عاد  اختفت المملكة وكل شيء  والان هو يحاول ان يحيئ مملكته من البداية التي لاتضم اي نقابة حاليا وخطوته الاولى كانت بأن يعمل بوت وهو انا كيف تشوفوني ؟ ههه مو مشكلة المهم توشيرو  يقول اذا بدكم تنضمون معنا اضغطو ع زر رابط الاستقبال.`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
+await GojoMdNx.send5ButImg(from, `` + '' + ' ', `مملكة أنمي فور من افضل الممالك بقيادة الامبراطور أريما والنائب أرثر من نأحية التحديات والمسابقات .`,unicorn, [{"urlButton": {"displayText": "「 قناتي 」「📍」◣","url": `${myweb}`}},{"urlButton": {"displayText": "「 رابط الاستقبال 」「📌」◣","url": `${sc}`}},{"quickReplyButton": {"displayText": "「 الاستلام 」「🍜」◣","id": 'donate'}},{"quickReplyButton": {"displayText": "「 المالك 」「👤」◣","id": 'owner'}}] )
 break
             default:
                 if (budy.startsWith('=>')) {
